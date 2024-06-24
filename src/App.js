@@ -18,7 +18,7 @@ export default function App() {
           // console.log("View tracked successfully:", response.data);
         })
         .catch((error) => {
-          console.error("Error tracking view:", error);
+          console.error("Error tracking view:");
         });
     }
   }, []);

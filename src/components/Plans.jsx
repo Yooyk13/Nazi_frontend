@@ -115,7 +115,7 @@ const Plans = () => {
         }, 3000);
       })
       .catch((error) => {
-        console.error("There was an error!", error);
+        console.error("There was an error!");
         setButtonText("Join now");
       });
   };
