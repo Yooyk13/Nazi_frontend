@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <img src={logo} height={30} width={40} alt="Logo" />
           <div className="ml-4 text-[25px] sm:block">
-            <span className="text-purple-600">Nazi</span> Community
+            <span className="text-purple-600">Nazi</span>Community
           </div>
         </div>
         <div className="hidden sm:flex space-x-4 items-center">

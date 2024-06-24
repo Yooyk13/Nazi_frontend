@@ -20,7 +20,7 @@ const Home = () => {
       <Navbar />
       <div className="max-w-[1024px] bg-transparent px-4 py-40 mx-auto h-[80vh]">
         <div className="flex flex-col max-w-[300px] lg:max-w-[600px] mx-auto p-5 text-white">
-          <h1 className="text-left lg:text-[80px] text-2xl italic sm:text-xl">
+          <h1 className="text-left mb-5 lg:text-[80px] text-5xl italic sm:text-xl">
             Earn
           </h1>
           <h1 className="mx-auto lg:text-[80px] lg:mt-6 text-7xl italic text-purple-600 sm:text-5xl">
@@ -29,7 +29,7 @@ const Home = () => {
           <h1 className="mx-auto lg:text-[80px] lg:mt-2 text-7xl italic sm:text-5xl">
             Invest
           </h1>
-          <h1 className="text-right lg:text-[80px] lg:mt-8 text-2xl italic sm:text-xl">
+          <h1 className="text-right mt-5 lg:text-[80px] lg:mt-8 text-5xl italic sm:text-xl">
             Repeat
           </h1>
         </div>

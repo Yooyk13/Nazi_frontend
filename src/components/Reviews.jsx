@@ -62,7 +62,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="flex flex-col max-w-[1024px] mx-auto px-5 items-center justify-center min-h-[40vh] bg-purple-600 p-4">
+    <div className="flex flex-col max-w-[1024px] mx-auto px-5 items-center justify-center min-h-[40vh] bg-purple-800 p-4">
       <h2 className="text-3xl font-bold text-white mb-8 rounded-lg">Reviews</h2>
       <div className="w-[300px] rounded-lg">
         <Slider {...settings} className="mb-10  ">

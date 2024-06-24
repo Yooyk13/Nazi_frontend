@@ -15,11 +15,11 @@ const plans = [
     level: "Beginner",
     icon: faSearch,
     description: [
-      "Basics of stockmarket.",
-      "How to place order & UI definition.",
-      "Fundamental Analysis.",
-      "Mentorship in investing.",
-      "24/7 lifetime support, etc.",
+      "Learn from Scratch",
+      "Start Your Knowledge With us",
+      "Easy learnings",
+      "Mentorship Support ",
+      "24/7 Call Support ",
     ],
     members: "4+ members",
     originalPrice: "2,599",
@@ -30,10 +30,10 @@ const plans = [
     level: "Average",
     icon: faBook,
     description: [
-      "Basics of stockmarket.",
-      "How to place order & UI definition.",
-      "Fundamental Analysis.",
-      "Mentorship in investing.",
+      "Sharping with your average knowledge with us",
+      "Easy learnings",
+      "Mentorship Support ",
+      "24/7 Call Support ",
     ],
     members: "9+ members",
     originalPrice: "4,599",
@@ -44,10 +44,10 @@ const plans = [
     level: "Advance",
     icon: faCrown,
     description: [
-      "Basics of stockmarket.",
-      "How to place order & UI definition.",
-      "Fundamental Analysis.",
-      "Mentorship in investing.",
+      "Ready to learn advanced topics with us",
+      "Easy learnings",
+      "Mentorship Support ",
+      "24/7 Call Support ",
     ],
     members: "1+ members",
     originalPrice: "9,199",
@@ -125,29 +125,29 @@ const Plans = () => {
   };
 
   return (
-    <div className="max-w-[1024px] lg:max-w-[1024px] mx-auto relative top-[-20px] p-4">
-      <h2 className="text-3xl font-bold mb-4 text-white text-center">
-        Choose your level
+    <div className="max-w-[1024px] mx-auto mt-15 mb-5 p-4">
+      <h2 className="text-3xl font-bold mb-10 text-gray-100 text-center">
+        Pick your Journey
       </h2>
-      <div className="space-y-8 lg:space-y-0 lg:flex lg:space-x-8">
+      <div className="space-y-8 lg:space-y-0 lg:flex lg:space-x-8 justify-center">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className=" text-white rounded-lg shadow-md p-6 flex flex-col"
+            className="bg-gray-800 text-gray-200 rounded-lg shadow-md p-6 flex flex-col w-full lg:w-1/3"
           >
             <div className="flex items-center mb-4">
               <FontAwesomeIcon
                 icon={plan.icon}
-                className="text-purple-600 text-4xl mr-4"
+                className="text-purple-600 text-5xl mr-4"
               />
               <h3 className="text-xl font-semibold">{plan.level}</h3>
-              {plan.pdfUrl && (
+              {/* {plan.pdfUrl && (
                 <FontAwesomeIcon
                   icon={faFilePdf}
                   className="text-purple-600 text-2xl ml-auto cursor-pointer"
                   onClick={() => handlePdfDownload(plan.pdfUrl)}
                 />
-              )}
+              )} */}
             </div>
             <ul className="list-disc list-inside space-y-2 flex-grow">
               {plan.description.map((desc, i) => (
@@ -155,14 +155,14 @@ const Plans = () => {
               ))}
             </ul>
             {plan.members && (
-              <div className="mt-4">
+              <div className="mt-4 flex justify-between items-center">
                 <button
                   onClick={() => openModal(plan)}
-                  className="bg-purple-600 text-white py-2 px-4 rounded-2xl"
+                  className="bg-purple-600 text-gray-200 py-2 px-4 rounded-2xl"
                 >
                   Join now
                 </button>
-                <span className="ml-4 text-sm">{plan.members}</span>
+                <span className="text-sm text-blue-400">{plan.members}</span>
               </div>
             )}
           </div>
@@ -203,7 +203,6 @@ const Plans = () => {
                   name="phoneNumber"
                   placeholder="Phone number"
                   value={formData.phoneNumber}
-                  onChange={handleInputChange}
                   maxLength="10"
                   className="w-full p-2 border border-gray-300 rounded"
                   required

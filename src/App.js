@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Plans from "./components/Plans";
 import Reviews from "./components/Reviews";
+import Features from "./components/Features";
 
 export default function App() {
   const hasTrackedView = useRef(false);
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <div className="bg-black">
       <Home />
+      <Features />
       <Plans />
       <Reviews />
       <Footer />

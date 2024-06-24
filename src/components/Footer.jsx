@@ -3,14 +3,14 @@ import { FaFacebook, FaInstagram, FaDiscord, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-gray-900 text-gray-100">
       <div className="max-w-screen-lg mx-auto py-8 px-4 md:px-0">
         {/* Flex Container */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left Section */}
           <div className="mb-8 md:mb-0 md:mr-16 text-center md:text-left">
             <h2 className="text-2xl font-bold mb-4">NAZI COMMUNITY</h2>
-            <p className="text-sm md:text-base max-w-sm mx-auto md:max-w-none">
+            <p className="text-sm text-gray-200 md:text-base max-w-sm mx-auto md:max-w-none">
               We are dedicated to empowering individuals with the knowledge and
               skills necessary to succeed in the dynamic world of the
               sharemarket.
@@ -18,54 +18,31 @@ const Footer = () => {
           </div>
 
           {/* Right Section */}
-          <div
-            className="flex flex-col md:text-center md:items-center"
-            style={{ position: "relative", zIndex: 1 }}
-          >
+          <div className="flex flex-col md:text-center md:items-center">
             {/* Legal Links */}
-            <div
-              className="mb-8 text-center md:text-left"
-              style={{ position: "relative", zIndex: 1 }}
-            >
-              <h3
-                className="text-lg font-bold mb-4"
-                style={{ position: "relative", zIndex: 1 }}
-              >
-                Legal
-              </h3>
-              <ul className="p-0" style={{ position: "relative", zIndex: 1 }}>
-                <li
-                  className="mb-4"
-                  style={{ position: "relative", zIndex: 1 }}
-                >
+            <div className="mb-8 text-center md:text-left">
+              <h3 className="text-lg font-bold mb-4">Legal</h3>
+              <ul className="p-0">
+                <li className="mb-4">
                   <a
                     href="/about.html"
-                    className="text-gray-400   hover:text-gray-50"
-                    style={{ position: "relative", zIndex: 1 }}
+                    className="text-gray-400 hover:text-gray-50"
                   >
                     About Us
                   </a>
                 </li>
-                <li
-                  className="mb-4"
-                  style={{ position: "relative", zIndex: 1 }}
-                >
+                <li className="mb-4">
                   <a
                     href="/terms.html"
-                    className="text-gray-400  hover:text-gray-50"
-                    style={{ position: "relative", zIndex: 1 }}
+                    className="text-gray-400 hover:text-gray-50"
                   >
                     Terms and Conditions
                   </a>
                 </li>
-                <li
-                  className="mb-4"
-                  style={{ position: "relative", zIndex: 1 }}
-                >
+                <li className="mb-4">
                   <a
                     href="/privacy.html"
-                    className="text-gray-400  hover:text-gray-50"
-                    style={{ position: "relative", zIndex: 1 }}
+                    className="text-gray-400 hover:text-gray-50"
                   >
                     Privacy Policy
                   </a>
@@ -96,6 +73,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="bg-black text-sm text-center text-gray-200 py-4">
+        <p>nazicommunity.xyz © 2024. All rights reserved</p>
       </div>
     </div>
   );
