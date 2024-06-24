@@ -73,7 +73,11 @@ const customStyles = {
 const Plans = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
-  const [formData, setFormData] = useState({ name: "", phoneNumber: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    phoneNumber: "",
+    selectedPlan: "", // Add selectedPlan to the formData state
+  });
   const [buttonText, setButtonText] = useState("Book now");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -87,12 +91,16 @@ const Plans = () => {
 
   const openModal = (plan) => {
     setSelectedPlan(plan);
+    setFormData((prevData) => ({
+      ...prevData,
+      selectedPlan: plan.level, // Set the selected plan level in formData
+    }));
     setIsOpen(true);
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    setFormData({ name: "", phoneNumber: "" });
+    setFormData({ name: "", phoneNumber: "", selectedPlan: "" });
     setButtonText("Book now");
   };
 
@@ -104,8 +112,12 @@ const Plans = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
+    const updatedFormData = {
+      ...formData,
+      name: `${formData.name} (${formData.selectedPlan})`, // Append selected plan to the name
+    };
     axios
-      .post("https://nazicommunity.xyz:5000/api/join", formData)
+      .post("https://nazicommunity.xyz:5000/api/join", updatedFormData)
       .then((response) => {
         setButtonText("Join now");
         setSuccessMessage("Success! Our team will call you shortly.");

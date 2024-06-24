@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black text-sm text-center text-gray-200 py-4">
+      <div className="bg-gray-900 text-sm text-center text-gray-200 py-4">
         <p>nazicommunity.xyz © 2024. All rights reserved</p>
       </div>
     </div>
