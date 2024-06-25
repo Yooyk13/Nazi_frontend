@@ -1,11 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
 import bgImage from "../assets/images/Background.png";
-import { FaDiscord } from "react-icons/fa";
+import { MdSchool } from "react-icons/md"; // Import the school icon
 
 const Home = () => {
   const handleButtonClick = () => {
-    window.location.href = "https://discord.gg/PnZU2Wb4";
+    const plansSection = document.getElementById("plans");
+    if (plansSection) {
+      plansSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -36,19 +39,19 @@ const Home = () => {
         <div className="mt-5">
           <p className="max-w-[300px] lg:hidden text-white mx-auto text-center px-5 text-2xl sm:text-xl">
             we will teach you <br />
-            how to master it.
+            how to master it
           </p>
           <p className="hidden lg:block max-w-[600px] mt-10 text-white mx-auto text-center px-5 text-2xl sm:text-xl">
-            we will teach you how to master it.
+            we will teach you how to master it
           </p>
         </div>
         <div className="flex justify-center mt-10">
           <button
             onClick={handleButtonClick}
-            className="flex items-center justify-center h-14 w-[300px] text-center p-1 italic text-2xl font-medium bg-purple-600 text-white rounded-2xl sm:text-xl"
+            className="flex items-center justify-center h-14 w-[300px]  text-nowrap text-center p-1 italic text-2xl font-medium bg-purple-600 text-white rounded-2xl sm:text-xl"
           >
-            <FaDiscord className="text-2xl mr-2" />
-            Join Our Discord
+            <MdSchool className="h-8 w-8 mr-2" />
+            Our Mentorship Plans
           </button>
         </div>
       </div>

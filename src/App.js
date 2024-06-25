@@ -25,10 +25,18 @@ export default function App() {
 
   return (
     <div className="bg-black">
-      <Home />
-      <Features />
-      <Plans />
-      <Reviews />
+      <div id="home">
+        <Home />
+      </div>
+      <div id="features">
+        <Features />
+      </div>
+      <div id="plans">
+        <Plans />
+      </div>
+      <div id="reviews">
+        <Reviews />
+      </div>
       <Footer />
     </div>
   );
