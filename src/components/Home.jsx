@@ -50,7 +50,7 @@ const Home = () => {
             onClick={handleButtonClick}
             className="flex items-center justify-center h-14 w-[300px]  text-nowrap text-center p-1 italic text-lg font-medium bg-purple-600 text-white rounded-2xl sm:text-xl"
           >
-            Our Mentorship Plans
+            <MdSchool className="mr-2  text-[30px]" /> Our Mentorship Plans
           </button>
         </div>
       </div>
