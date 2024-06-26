@@ -48,7 +48,7 @@ const Home = () => {
         <div className="flex justify-center mt-10">
           <button
             onClick={handleButtonClick}
-            className="flex items-center justify-center h-14 w-[300px]  text-nowrap text-center p-1 italic text-2xl font-medium bg-purple-600 text-white rounded-2xl sm:text-xl"
+            className="flex items-center justify-center h-14 w-[350px]  text-nowrap text-center p-1 italic text-2xl font-medium bg-purple-600 text-white rounded-2xl sm:text-xl"
           >
             {/* <MdSchool className="h-8 w-8 mr-2" /> */}
             Our Mentorship Plans
